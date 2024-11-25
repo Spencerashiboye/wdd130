@@ -35,17 +35,14 @@ def pressure_loss_from_fittings( fluid_velocity, quantity_fittings):
     return pressure
 
 def reynolds_number(hydraulic_diameter, fluid_velocity):
-    density = 998.3
+    density = 998.2
     dynamic_viscosity = 0.0010016
     reynolds_number = (density * hydraulic_diameter * fluid_velocity) / dynamic_viscosity
     return reynolds_number
 
 def pressure_loss_from_pipe_reduction(larger_diameter, fluid_velocity, reynolds_number, smaller_diameter):
-    density = 998.2
-    # calculation of constant K
-    k =  0.1 + (50 / reynolds_number) * ((larger_diameter / smaller_diameter) ** 4 - 1)
-    # calculate the pressure loss
-    pressure_loss = -k * density * fluid_velocity**2 / 2000
+    k = 0.1 + (50 / reynolds_number) * ((larger_diameter / smaller_diameter) ** 4 - 1)
+    pressure_loss = -k * 998.2 * (fluid_velocity ** 2) / 2000
     return pressure_loss
 
 PVC_SCHED80_INNER_DIAMETER = 0.28687 # (meters)  11.294 inches
