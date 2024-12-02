@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
  :root {
@@ -36,6 +37,70 @@
   header img {
     max-height: 100px;
   }
+
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-neutral);
+  }
+  
+  .History {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-text);
+  }
+  .History h2{
+    position: absolute;
+    top: 100px;
+  }
+  
+  section p {
+    flex: 1;
+    margin: 20px 0px;
+    font-size: 1rem;
+    color: var(--color-text);
+    text-align: justify;
+  }S
+
+  .adventure{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+  }
+  .adventure h2{
+    position: absolute;
+    top: 680px;
+    left: 400px;
+  }
+
+  .adventure figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .adventure img{
+    width:auto;
+   }
+
+  .adventure figcaption{
+    padding: 10px;
+    font-size: 1rem;
+    color: var(--color-text);
+    background-color: var(--color-neutral);
+    font-weight: bold;
+   }
   
   header nav a {
     color: white;
@@ -109,19 +174,33 @@
   
   /* Footer */
   footer {
+    display: flex;
+    justify-content: space-between;
     text-align: center;
     padding: 15px;
     background-color: #333;
     color: white;
     font-size: 0.9em;
   }
+
+  footer p{
+    margin: 0;
+  }
+   footer.sociallinks{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 15px;
+    top: 50px;
+    transform: translateY(-50%);
+  }
   
-  footer .sociallinks a img {
+   footer .sociallinks a img {
     width: 30px;
     margin: 0 5px;
   }
   
-  footer .sociallinks a img:hover {
+   footer .sociallinks a img:hover {
     opacity: 0.8;
   }
   
