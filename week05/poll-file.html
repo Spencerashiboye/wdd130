@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="charset" content="wdth=device-width,initial-scale=1.0">
+        <meta name="discription" content="Spencer Ashiboye WDD130">
+        <meta name="author" content="Spencer Ashiboye">
+        <title>WDD130 | HTML Form - User Poll</title>
+        <link rel="stylesheet" href="styles/poll-form.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family
+        =Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <header>
+        <h1>WDD 130 | Spencer Ashiboye | HTML Form - User Poll</h1>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <div class="form-item column2">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname">
+                </div>
+                <div class="form-item column2">
+                    <label for="useremail">Email:</label>
+                    <input type="Email" id="useremail" name="useremail">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Questions</legend>
+                <div class="form-item column1">
+                    <label for="browser">What is your favorite internet browser?</label>
+                    <select name="browser" id="browser">
+                    <option value="chrome">Chrome</option>
+                    <option value="firefox">firefox</option>
+                    <option value="safari">Safari</option>
+                    <option value="edge">Edge</option>
+                    <option value="brave">Brave</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="form-item column1">
+                    <label for="pet">Do you have a household pet?</label>
+                    <input type="checkbox" id="pet" name="pet">
+                </div>
+                <div class="form-item column">
+                    <label for="feedback">List the places you have lived:</label>
+                    <input type="text" id="places" name="places">
+                </div>
+            </fieldset>
+            <button type="submit">Submit Poll</button>
+        </form>
+    </main>
+    <footer>
+        <P>©️2024 | HTML Form - User Poll Activity | Spencer Ashiboye</P>
+    </footer>
+    </body>
+</html>
