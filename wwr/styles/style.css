@@ -1,0 +1,233 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: #ffcc00;
+    color: #004080;
+    border-radius: 5px;
+}
+
+header img {
+    height: 50px;
+}
+
+/* Main */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+    color: #004080;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+main img {
+    border: 3px solid #004080;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+main p {
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+/* List Styling */
+ul.box {
+    list-style: none;
+    margin: 20px auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+ul.box li {
+    padding: 10px 20px;
+    background: #004080;
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+ul.box li:hover {
+    background: #ffcc00;
+    color: #004080;
+    transform: translateY(-5px);
+}
+
+/* Aside */
+aside {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    text-align: center;
+}
+
+aside h2 {
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+aside img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+aside p {
+    margin: 20px 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero.jpg') center/cover no-repeat;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Grid Section */
+.main.gird {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.grid-term {
+    text-align: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-term:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.grid-term img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.grid-term h2 {
+    margin: 10px 0;
+    color: #004080;
+}
+
+.grid-term p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Newsletter Section */
+section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+section input, section button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 400px;
+    font-size: 1rem;
+}
+
+section button {
+    background: #004080;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+section button:hover {
+    background: #ffcc00;
+    color: #004080;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+}
+
+footer nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+}
+
+footer img {
+    height: 30px;
+}
