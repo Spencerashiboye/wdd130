@@ -27,7 +27,8 @@
   }
   
   header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
@@ -101,6 +102,13 @@
     background-color: var(--color-neutral);
     font-weight: bold;
    }
+
+  header nav{
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 2;
+    gap: 15px;
+  }
   
   header nav a {
     color: white;
