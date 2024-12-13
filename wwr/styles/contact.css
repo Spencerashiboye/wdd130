@@ -1,36 +1,63 @@
-/* General styles */
-body {
-    font-family: 'Poppins', sans-serif;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ :root {
+    --color-primary: #0073e6;
+    --color-secondary: #00b300; 
+    --color-neutral: #f5f5f5; 
+    --color-text: #333333; 
+    --color-hero-overlay: rgba(0, 0, 0, 0.6); 
+}
+
+ a{ 
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+  }
+
+  /* General styles */
+ body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
+    box-sizing: border-box;
+  }
+  
 
-header {
-    display: flex;
-    align-items: center;
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
-    background-color: #0a0a0a;
+    background-color: #333;
     color: white;
-}
+  }
+  header img {
+    max-height: 100px;
+  }
 
-header img {
-    height: 50px;
-}
-
-nav a {
+  header nav{
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 2;
+    gap: 15px;
+  }
+  
+  header nav a {
+    color: white;
     text-decoration: none;
-    color: white;
-    margin: 0 10px;
-    font-weight: bold;
-}
-
-nav a.active {
-    border-bottom: 2px solid white;
-}
-
+    margin-left: 15px;
+    font-weight: 500;
+  }
+  
+  header nav a:hover {
+    text-decoration: underline;
+  }
+/* Main content styles */
 main {
     padding: 20px;
     max-width: 800px;
@@ -40,6 +67,7 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Other styles remain the same */
 h1, h2, h3, h4 {
     color: #1465b6;
     text-align: center;
@@ -127,20 +155,36 @@ h1, h2, h3, h4 {
     width: auto;
 }
 
-/* Footer styles */
-footer {
+
+  /* Footer */
+ footer {
+    display: flex;
+    justify-content: space-between;
     text-align: center;
-    padding: 20px;
-    background-color: #080808;
+    padding: 15px;
+    background-color: #333;
     color: white;
-}
+    font-size: 0.9em;
+  }
 
-footer nav a {
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-footer img {
-    height: 30px;
-    vertical-align: middle;
-}
+  footer p{
+    margin: 0;
+  }
+   footer.sociallinks{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 15px;
+    top: 50px;
+    transform: translateY(-50%);
+  }
+  
+   footer .sociallinks a img {
+    width: 30px;
+    margin: 0 5px;
+  }
+  
+   footer .sociallinks a img:hover {
+    opacity: 0.8;
+  }
+  
