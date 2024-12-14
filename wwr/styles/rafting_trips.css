@@ -87,6 +87,32 @@ h2 {
     line-height: 1.4;
 }
 
+.trip-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.trip-table th, .trip-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.trip-table th{
+    background-color: #0073e6;
+    color: white;
+    font-weight: bold;
+}
+
+.trip-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.trip-table tr:hover {
+    background-color: #f1f1f1;
+}
+
 /* Footer */
 footer {
     text-align: center;
