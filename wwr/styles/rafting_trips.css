@@ -137,3 +137,36 @@ h2 {
 .trip-table tr:last-child td {
     border-bottom: none;
 }
+
+ /* Footer */
+ footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+  }
+  
+  footer p{
+    margin: 0;
+  }
+   footer.sociallinks{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 15px;
+    top: 50px;
+    transform: translateY(-50%);
+  }
+  
+   footer .sociallinks a img {
+    width: 30px;
+    margin: 0 5px;
+  }
+  
+   footer .sociallinks a img:hover {
+    opacity: 0.8;
+  }
+  
