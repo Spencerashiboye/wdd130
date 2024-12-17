@@ -25,13 +25,14 @@ def count_words_in_file(filename):
         dict: A dictionary where keys are words and values are their counts.
     """
     try:
-        with open(filename, 'r') as file:
+        # Try reading the file with UTF-8 encoding first
+        with open(filename, 'r', encoding='utf-8') as file:
             text = file.read()
-        return count_words(text)
-    except FileNotFoundError:
-        raise FileNotFoundError(f"Error: The file '{filename}' does not exist.")
-    except Exception as e:
-        raise RuntimeError(f"An error occurred: {e}")
+    except UnicodeDecodeError:
+        # Fallback to a more permissive encoding if UTF-8 fails
+        with open(filename, 'r', encoding='latin-1') as file:
+            text = file.read()
+    return count_words(text)
 
 if __name__ == "__main__":
     filename = input("Enter the filename: ")
@@ -39,5 +40,9 @@ if __name__ == "__main__":
         word_counts = count_words_in_file(filename)
         for word, count in word_counts.items():
             print(f"{word}: {count}")
+    except FileNotFoundError:
+        print(f"Error: The file '{filename}' does not exist.")
+    except UnicodeDecodeError:
+        print(f"Error: Could not decode the file '{filename}'. Please ensure it is a valid text file.")
     except Exception as e:
-        print(e)
+        print(f"An error occurred: {e}")
